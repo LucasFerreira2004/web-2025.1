@@ -1,0 +1,40 @@
+body{
+    background-color: antiquewhite;
+}
+img{
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+}
+
+table, tr, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+table{
+    margin: 20px auto;
+}
+th{
+    background-color: black;
+    color: white;
+}
+th, td{
+   text-align: center; 
+   padding: 0.3em;
+}
+
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(147, 192, 252);
+    font-size: 18pt;
+
+}
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0.3rem;
+    background-color: antiquewhite;
+}
+
+pre{
+    background-color: burlywood;
+}
