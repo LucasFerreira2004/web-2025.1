@@ -39,6 +39,7 @@ ul>li:hover{
 }
 ul>li:hover>a {
     color: black;
+    cursor: pointer;
 }
 main{
     height: 100vh;
@@ -79,4 +80,16 @@ footer{
     padding: 1rem;
     background-color: #ddd;
     text-align: center;
+}
+
+@media screen and (max-width: 400px) {
+    nav ul li{
+        display: block;
+    }
+    nav{
+        flex-direction: column;
+    }
+    main{
+        flex-direction: column;
+    }
 }
