@@ -9,7 +9,7 @@ body{
 }
 
 header{
-    background-color: #1abc9c;
+    background-color: #008000;
     color: #ddd;
     text-align: center;
 }
@@ -18,15 +18,19 @@ header>div{
     padding: 2rem;
 }
 nav{
+    top: 0;
+    position: sticky;
+    padding: 0 10px;
+
     display: flex;
     flex-direction: row;
-    background-color: #333;
-    height: fit-content;
+    background-color: #808080;
+    align-items: center;
+    justify-content: space-between;
 }
-ul {
-    list-style-type: none;
-}
+
 ul > li{
+    list-style-type: none;
     display: inline-block;
     padding: 10px;
 }
@@ -42,8 +46,16 @@ ul>li:hover>a {
     cursor: pointer;
 }
 
-.dark-light-mode-butto{
-    height: 15px;
+nav > button{
+    width: 70px;
+    height: 30px;
+}
+
+
+.dark-light-mode-button{
+    margin: 0 20px;
+    height: 20px;
+    width: 80px;
 }
 
 main{
@@ -57,18 +69,18 @@ main div h1{
 main div p{
     margin: 0.75rem 0;
 }
-main > div{
+main>div, main>aside{
     padding: 1rem;
 }
-.image-placeholder{
+.image-placeholder, img{
     background-color: #aaa;
-    height: 50px;
+    height: 100px;
 }
 
 .big-image{
     height: 100px;
 }
-.left-content{
+aside{
     flex: 3;
     background-color: #f1f1f1;
 }
@@ -87,7 +99,7 @@ footer{
     text-align: center;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
     nav ul li{
         display: block;
     }

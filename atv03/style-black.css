@@ -1,0 +1,12 @@
+body.style-black{
+    background-color: black;
+    color: white;
+}
+
+body.style-black aside{
+    background-color: #333;
+}
+
+body.style-black footer{
+    background-color: #252525;
+}
