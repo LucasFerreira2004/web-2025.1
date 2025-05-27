@@ -41,11 +41,6 @@ ul>li:hover>a {
     color: black;
     cursor: pointer;
 }
-
-.dark-light-mode-butto{
-    height: 15px;
-}
-
 main{
     height: 100vh;
     display: flex;
