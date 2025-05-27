@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questao 1</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        header{
+            padding: 1rem;
+            background-color: cadetblue;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        div.content-container{
+            display: flex;
+            flex-direction: row;
+            height: 90vh;
+        }
+        h2{
+            margin-bottom: 0.5rem;
+        }
+        main, asside{
+            padding: 0.5rem;
+        }
+        asside{
+            background-color: aqua;
+            flex: 3;
+        }
+        ul{
+            list-style-type: none;
+        }
+        li > a {
+            text-decoration: none;
+            color: black;
+        }
+
+        main{
+            background-color: rgb(154, 212, 212);
+            flex: 7;
+        }
+        .image-placeholder{
+            background-color: #aaa;
+            height: 50px;
+            margin: 0.5rem 0;
+        }   
+        footer{
+            padding: 1rem;
+            background-color: rgb(146, 177, 182);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media screen and (max-width: 400px) {
+            div.content-container{
+                flex-direction: column;
+            }
+            asside{
+                flex: 0;
+            }
+        }
+        /*Estilo Card de Notificação*/
+        div.notification-card{
+            background-color: white;
+            width: 250px;
+            border-radius: 0.5rem;
+            box-shadow:  0 0 20px black;
+            padding: 0.5rem 1rem;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+
+            display: flex;
+            flex-direction: column;
+        }
+        .notification-card > .card-content > h3{
+            margin-bottom: 0.25rem;
+        }
+        .notification-card > .card-header{
+            padding: 0.5rem 0;
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        .notification-card > .card-header > .close-btn{
+            border: none;
+            background-color: white;
+            font-size: 16pt;
+        }
+        .close-btn:hover{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Desenvolviemnto de software WEB</h1>
+    </header>
+
+    <div class="content-container">
+        <asside>
+            <h2>Menu Lateral</h2>
+            <nav>
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
+                </ul>
+            </nav>
+        </asside>   
+        <main>
+            <h2>Conteúdo</h2>
+            <h3>Introdução ao Brasil</h3>
+            <p>O verde representa as matas, o amarelo as riquezas, o azul o céu e o branco a paz. O lema "Ordem e Progresso" está no centro da bandeira.</p>
+            <div class="image-placeholder">img</div>
+            <p>O verde representa as matas, o amarelo as riquezas, o azul o céu e o branco a paz. O lema "Ordem e Progresso" está no centro da bandeira.</p>
+            <div class="image-placeholder">img</div>
+        </main>
+    </div>
+
+    <footer>
+        <address>
+            <a href="lukasnoobre@gmail.com">lukasnoobre@gmail.com</a>
+        </address>
+        <p>2025.1</p>
+        <p>Todos os direitos reservados</p>
+    </footer>
+
+    <div class="notification-card">
+        <div class="card-header">
+            <button class="close-btn">X</button>
+        </div>
+        <div class="card-content">
+            <h3>Novidade!</h3>
+            <p>Confira nossos novos produtos.</p>
+        </div>
+    </div>
+</body>
+</html>
