@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questoa 2</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+        }
+        table{
+            border: 1px solid black;
+            table-layout: auto;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        table tbody tr:hover{
+            background-color: #e0f7fa;
+        }
+        thead{
+            background-color: #f0f0f0;   
+        }
+        table tr th, table tr td{
+            padding: 0 0.3rem;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>
+          Produtos
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">Código</th>
+            <th scope="col">Nome do Produto</th>
+            <th scope="col">Categoria</th>
+            <th scope="col">Preco (R$)</th>
+            <th scope="col">Estoque</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>002244</td>
+            <td>Melancia</td>
+            <td>Fruta</td>
+            <td>3.44</td>
+            <td>55</td>
+          </tr>
+          <tr>
+            <td>224411</td>
+            <td>Banana</td>
+            <td>Fruta</td>
+            <td>5.20</td>
+            <td>1000</td>
+          </tr>
+          <tr>
+            <td>667733</td>
+            <td>Alface</td>
+            <td>Vegetal</td>
+            <td>3.44</td>
+            <td>40</td>
+          </tr>
+          <tr>
+            <td>667733</td>
+            <td>Tomate</td>
+            <td>Vegetal</td>
+            <td>0.50</td>
+            <td>400</td>
+          </tr>
+        </tbody>
+      </table>
+      
+</body>
+</html>
