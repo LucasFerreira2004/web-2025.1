@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questao 3</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+        }
+        main{
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        main > .buttons{
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+        }
+        main > .buttons > button{
+            padding: 0 0.5rem;
+            font-size: 16pt;
+        }
+        main > #pokemonImg{
+            height: 250px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <img id="pokemonImg" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"/>
+        <div class="buttons">
+            <button id="back" onclick="back()">VOLTAR</button>
+            <button id="next" onclick="next()">ADIANTAR</button>        
+        </div>
+    </main>
+</body>
+<script>
+    let imgNumber = 1;
+    // document.getElementById("back").addEventListener("click", back());
+    // document.getElementById("back").addEventListener("click", next());
+    const ulrPrefix = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/"
+    const urlPostfix = ".svg"
+
+    function back(){
+        if (imgNumber === 1) {
+            window.alert("impossível voltar mais que isso")
+            return;
+        }
+        imgNumber--;
+        let imgUrl = ulrPrefix + imgNumber + urlPostfix;
+        document.getElementById("pokemonImg").src = imgUrl;
+    }
+    function next(){
+        if (imgNumber === 100) {
+            window.alert("impossível adiantar mais que isso")
+            return;
+        }
+        imgNumber++;
+        let imgUrl = ulrPrefix + imgNumber + urlPostfix;
+        document.getElementById("pokemonImg").src = imgUrl;
+    }
+</script>
+</html>
