@@ -10,6 +10,9 @@
             margin: 0;
             box-sizing: border-box;
         }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
         header{
             padding: 1rem;
             background-color: cadetblue;
@@ -67,7 +70,44 @@
                 flex: 0;
             }
         }
+        /*Estilo Card de Notificação*/
+        div.notification-card{
+            background-color: white;
+            width: 250px;
+            border-radius: 0.5rem;
+            box-shadow:  0 0 20px black;
+            padding: 0.5rem 1rem;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+
+            display: flex;
+            flex-direction: column;
+        }
+        .notification-card > .card-content > h3{
+            margin-bottom: 0.25rem;
+        }
+        .notification-card > .card-header{
+            padding: 0.5rem 0;
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        .notification-card > .card-header > .close-btn{
+            border: none;
+            background-color: white;
+            font-size: 16pt;
+        }
+        .close-btn:hover{
+            cursor: pointer;
+        }
     </style>
+    <script>
+        function closeNotificationCard(){
+            console.log("clicou");
+            let card = document.querySelector("#notification-card");
+            card.style.display = "none";
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -103,5 +143,15 @@
         <p>2025.1</p>
         <p>Todos os direitos reservados</p>
     </footer>
+
+    <div class="notification-card" id="notification-card">
+        <div class="card-header">
+            <button class="close-btn" onclick="closeNotificationCard()">X</button>
+        </div>
+        <div class="card-content">
+            <h3>Novidade!</h3>
+            <p>Confira nossos novos produtos.</p>
+        </div>
+    </div>
 </body>
 </html>
