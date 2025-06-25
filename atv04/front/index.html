@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atv4</title>
+</head>
+<body>
+    <table id="tabela-alunos">
+        <tr id="media">
+            <td colspan="3">
+                media dos IRAs
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        const tabelaAlunos = document.getElementById("tabela-alunos")
+
+        async function carregarElementos(){
+            const response = await fetch("http://localhost:3000/alunos/")
+            const jsonResponse = await response.json();
+            let somaIra = 0;
+            let mediaIra;
+            jsonResponse.forEach(aluno => {
+                const row = tabelaAlunos.insertRow();
+
+                const cell1 = row.insertCell(0);
+                const cell2 = row.insertCell(1);
+                const cell3 = row.insertCell(2);
+                const cell4 = row.insertCell(3);
+
+                cell1.innerHTML = aluno.id;
+                cell2.innerHTML = aluno.nome;
+                cell3.innerHTML = aluno.curso;
+                cell4.innerHTML = aluno.ira; 
+
+                somaIra += aluno.ira;
+            });
+            mediaIra = somaIra / jsonResponse.length;
+
+            const media = document.getElementById("media")
+            const mediaCell = media.insertCell(1);
+            mediaCell.innerHTML = mediaIra;
+        }
+        carregarElementos();
+    </script>
+</body>
+</html>

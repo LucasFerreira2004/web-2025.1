@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="criarProfessor(); return false;">
+        <label for="nome">Nome:</label><br>
+        <input type="text" id="nome" name="nome" required><br><br>
+
+        <label for="titulacao">Titulação:</label><br>
+        <input type="text" id="titulacao" name="titulacao" required><br><br>
+
+        <label for="imagem">Imagem (URL):</label><br>
+        <input type="text" id="imagem" name="imagem" placeholder="https://exemplo.com/imagem.jpg" required><br><br>
+
+        <button type="submit">Cadastrar Professor</button>
+    </form>
+
+    <h1>Listar professores</h1>
+    <div id="professores">
+    </div>
+    <script>
+        async function criarProfessor(event){
+            event;
+            const nome = document.getElementById("nome").value;
+            const titulacao = document.getElementById("titulacao").value;
+            const imagem = document.getElementById("imagem").value;
+
+            const novoProfessor = {nome, titulacao, imagem}
+            const response = await fetch(
+                "http://localhost:3000/professores/criar",
+                {
+                    method: "POST",
+                    headers: {"Content-Type":"application/json"},
+                    body: JSON.stringify(novoProfessor)
+                }
+            )
+            const json = await response.json();
+            console.log(json);
+        }
+
+        async function listarProfessores(){
+            const response = await fetch("http://localhost:3000/professores/listar");
+            const jsonResponse = await response.json();
+            
+            //console.log(jsonResponse);
+            const professorDiv = document.getElementById("professores");
+            for (professor of jsonResponse){
+                const newDiv = document.createElement("div");
+                newDiv.innerHTML = `
+                    <h2>${professor.nome}</h2>
+                    <h3>${professor.titulacao}</h3>
+                    `;
+                professorDiv.appendChild(newDiv);
+            }
+        }
+        listarProfessores();
+
+    </script>
+</body>
+</html>
