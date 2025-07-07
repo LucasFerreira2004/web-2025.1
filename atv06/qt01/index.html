@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>questão 1</title>
+</head>
+
+<body>
+    <table id="product-table">
+        <tr>
+            <th>id</th>
+            <th>nome</th>
+            <th>preco</th>
+        </tr>
+    </table>
+
+    <script type="module" src="./scripts.js"></script>
+    <script type="module">
+        import getProducts from "./scripts.js"
+        const tableProducts = document.querySelector("#product-table")
+        let averagePrice = 0
+
+        async function consumeList() {
+            try {
+                const products = await getProducts();
+                let numberOfProducts = products.length;
+
+                products.forEach(product => {
+                    const row = tableProducts.insertRow();
+                    const cell1 = row.insertCell(0);
+                    const cell2 = row.insertCell(1);
+                    const cell3 = row.insertCell(2);
+
+                    cell1.innerHTML = product.id;
+                    cell2.innerHTML = product.name;
+                    cell3.innerHTML = product.price;
+
+                    averagePrice = averagePrice += product.price;
+                });
+                averagePrice /= numberOfProducts;
+                console.log(averagePrice);
+            } catch (error) {
+                console.log(error);
+            }
+        }
+
+        await consumeList();
+
+        function markAboveAverage(){
+            const rows = document.querySelectorAll("#product-table tr")
+            rows.forEach((row) => {
+                const priceCell = row.lastChild
+                const price = parseFloat(priceCell.textContent)
+                if (price > averagePrice)
+                    priceCell.style.color = "red"
+            })
+        }
+        markAboveAverage();
+    </script>
+</body>
+
+</html>
