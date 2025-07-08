@@ -21,7 +21,7 @@ function sleep(miliseconds) {
 
 export default function getProducts(){
     return new Promise(async (resolve, reject) => {
-       // await sleep(1000);
+        await sleep(4000);
         let randomNumber = Math.random() * 100;
         randomNumber = Math.ceil(randomNumber)
         console.log(randomNumber);
