@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>questao 2</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        img{
+            width: 200px;
+            height: 200px;
+            display: none;
+        }
+        td{
+            width: 200px;
+            height: 200px;
+            background-color: #050505;
+        }
+        td:hover{
+            cursor: pointer;
+        }
+        table{
+            margin: 0 auto;
+            gap:3rem;
+        }
+
+        #points-containner{
+            width: 300px;
+            margin: 0 auto;
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        p{
+            font-size: 22pt;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+        <td data-pair="1"><img src="https://media.istockphoto.com/id/1313823703/pt/foto/one-brown-chicken-egg-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=xwuuodcja84SvjrasjFDoor5Wo_3qT6OZ5VmtDs2RbQ=" /></td>
+        <td data-pair="2"><img src="https://www.estadao.com.br/resizer/v2/G6JGBBTELRKK3MULBGWX5PQ6UA.jpg?quality=80&auth=01ec424a5b1f68d008975ddec8d83cb9b87c6308da320468f805e4e706e76eba&width=380" /></td>
+        <td data-pair="3"><img src="https://a-static.mlcdn.com.br/1500x1500/ventilador-de-teto-ventisol-fenix-inverter-controle-remoto-placa-led-20w-integrada-bivolt/techshop/venven00118/0275d81c826325ea6b3522796c634848.jpeg" /></td>
+        <td data-pair="1"><img src="https://media.istockphoto.com/id/1313823703/pt/foto/one-brown-chicken-egg-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=xwuuodcja84SvjrasjFDoor5Wo_3qT6OZ5VmtDs2RbQ=" /></td>
+    </tr>
+    <tr>
+        <td data-pair="4"><img src="https://recreio.com.br/wp-content/uploads/legacy/2021/01/29/zepelim-1227139.jpg"></td>
+        <td data-pair="4"><img src="https://recreio.com.br/wp-content/uploads/legacy/2021/01/29/zepelim-1227139.jpg"></td>
+        <td data-pair="5"><img src="https://media.licdn.com/dms/image/v2/D5603AQHYPvhy8Kn2Bg/profile-displayphoto-shrink_200_200/B56ZRLGseQHIAY-/0/1736426834591?e=1757548800&v=beta&t=uDenQR52ozAMMFNyH9Uc67G4NZV8D2zNLppglWqHig8" /></td>
+        <td data-pair="6"><img src="https://alnesportes.wordpress.com/wp-content/uploads/2012/11/tyler-james-williams.jpg" /></td>
+    </tr>
+    <tr>
+        <td data-pair="7"><img src="https://i.ytimg.com/vi/ie2r9JH9ypI/mqdefault.jpg" /></td>
+        <td data-pair="8"><img src="https://bkparts.com.br/wp-content/uploads/2023/09/15211570238_VIDRO20SEM20SUPORTE-1.webp" /></td>
+        <td data-pair="7"><img src="https://i.ytimg.com/vi/ie2r9JH9ypI/mqdefault.jpg" /></td>
+        <td data-pair="3"><img src="https://a-static.mlcdn.com.br/1500x1500/ventilador-de-teto-ventisol-fenix-inverter-controle-remoto-placa-led-20w-integrada-bivolt/techshop/venven00118/0275d81c826325ea6b3522796c634848.jpeg" /></td>
+    </tr>
+    <tr>
+        <td data-pair="5"><img src="https://media.licdn.com/dms/image/v2/D5603AQHYPvhy8Kn2Bg/profile-displayphoto-shrink_200_200/B56ZRLGseQHIAY-/0/1736426834591?e=1757548800&v=beta&t=uDenQR52ozAMMFNyH9Uc67G4NZV8D2zNLppglWqHig8" /></td>
+        <td data-pair="6"><img src="https://alnesportes.wordpress.com/wp-content/uploads/2012/11/tyler-james-williams.jpg" /></td>
+        <td data-pair="8"><img src="https://bkparts.com.br/wp-content/uploads/2023/09/15211570238_VIDRO20SEM20SUPORTE-1.webp" /></td>
+        <td data-pair="2"><img src="https://www.estadao.com.br/resizer/v2/G6JGBBTELRKK3MULBGWX5PQ6UA.jpg?quality=80&auth=01ec424a5b1f68d008975ddec8d83cb9b87c6308da320468f805e4e706e76eba&width=380" /></td>
+    </tr>
+</table>
+
+    <div id="points-containner">
+        <h1>Pontos</h1> 
+        <br />
+        <p id="qtd-points">0</p>
+    </div>
+
+        <script src="./game.js"> </script>
+</body>
+</html>
